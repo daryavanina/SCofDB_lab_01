@@ -14,3 +14,4 @@ from .exceptions import InvalidEmailError
 
 class User:
     pass
+# ---
