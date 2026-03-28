@@ -34,7 +34,7 @@ CREATE TABLE users (
     name       VARCHAR(255)  NOT NULL DEFAULT '',
     created_at TIMESTAMPTZ   NOT NULL DEFAULT NOW(),
     CONSTRAINT email_not_empty CHECK (email <> ''),
-    CONSTRAINT email_valid     CHECK (email ~* '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$')
+    CONSTRAINT email_valid     CHECK (email ~* '^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$')
 );
 
 -- TODO: Создать таблицу orders
